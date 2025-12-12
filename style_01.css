@@ -1,0 +1,408 @@
+/* NeonBurger Cyberpunk Styles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a12 0%, #000000 100%);
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ff00ff;
+    padding-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #ff00ff;
+    text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+    letter-spacing: 2px;
+}
+
+/* Button Styles */
+.add-btn-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.launch-btn {
+    background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%);
+    border: 2px solid #00ffff;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+    transition: all 0.3s;
+}
+
+.launch-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    background: rgba(10, 10, 18, 0.8);
+    border: 2px solid #ff00ff;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.5), inset 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+.form-container h2 {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00ffff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 0 10px #00ffff;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:disabled {
+    background: #111;
+    border-color: #333;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+/* Error Messages */
+.error {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* Success Message */
+.success-message {
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid #0f0;
+    color: #0f0;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #00ffff 0%, #ff00ff 100%);
+    border: 2px solid #ff00ff;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px #00ffff;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px #00ffff;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Menu Item Card */
+.menu-item {
+    background: rgba(10, 10, 18, 0.9);
+    border: 2px solid #ff00ff;
+    padding: 25px;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.3), inset 0 0 30px rgba(0, 255, 255, 0.05);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.menu-item:hover {
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.5), inset 0 0 40px rgba(0, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Category Badge */
+.category-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.category-burger {
+    background: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.category-drink {
+    background: #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.category-side {
+    background: #ffff00;
+    box-shadow: 0 0 10px #ffff00;
+}
+
+/* Item Details */
+.item-name {
+    color: #ff00ff;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #ff00ff;
+    letter-spacing: 1px;
+    padding-right: 80px;
+}
+
+.item-description {
+    color: #00ffff;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+/* Price Tag */
+.price-tag {
+    background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%);
+    padding: 10px 20px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.price-tag span {
+    color: #000;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* Spicy Level */
+.spicy-level {
+    color: #ffff00;
+    font-size: 12px;
+    text-shadow: 0 0 10px #ffff00;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.btn-edit:hover {
+    background: #00ffff;
+    color: #000;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.btn-delete {
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-delete:hover {
+    background: #ff0000;
+    color: #fff;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* Edit Form inside card */
+.menu-item .form-group input,
+.menu-item .form-group textarea {
+    font-size: 12px;
+    padding: 10px;
+}
+
+.menu-item .form-group label {
+    font-size: 12px;
+}
+
+.menu-item .action-buttons button {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.btn-save {
+    flex: 1;
+    padding: 10px;
+    background: #00ffff;
+    border: 2px solid #00ffff;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffff;
+    transition: all 0.3s;
+}
+
+.btn-save:hover {
+    box-shadow: 0 0 20px #00ffff;
+    transform: scale(1.05);
+}
+
+.btn-cancel {
+    flex: 1;
+    padding: 10px;
+    background: #ff00ff;
+    border: 2px solid #ff00ff;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff00ff;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.btn-cancel:hover {
+    box-shadow: 0 0 20px #ff00ff;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 0, 255, 0.3);
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 32px;
+    }
+    
+    .header p {
+        font-size: 14px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
